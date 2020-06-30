@@ -1,0 +1,79 @@
+GET http://localhost:3000/api
+
+###
+
+GET http://localhost:3000/api/dishes/5ec0049601f01b1c9a19b4b0
+
+###
+
+GET http://localhost:3000/api/categories/5ec000f3591ae81a06b04117
+
+###
+
+POST http://localhost:8000/api
+Content-Type: application/json
+
+{
+    "name" : "Пицца 4 сыра",
+    "picture": "https://www.pizzaking.ua/resizer/resize/upload/catalog/e/e7c6ce8e7bffbd7fc86a4c119262da24-472-472-c.jpg",
+    "category": "5ec000f3591ae81a06b04117",
+    "price": "90"
+}
+
+###
+
+POST http://localhost:3000/api/category
+Content-Type: application/json
+
+{
+    "name" : "Салаты",
+    "picture": "https://icon-icons.com/icons2/881/PNG/48/Pizza_icon-icons.com_68706.png"
+}
+
+
+###
+
+PATCH http://localhost:8000/api/dishes/5ec030a3a0f24e2a81d0aa28
+Content-Type: application/json
+
+{
+    "name": "Пицца Неаполитанская",
+    "picture": "https://www.pizzaking.ua/resizer/resize/upload/catalog/e/e7c6ce8e7bffbd7fc86a4c119262da24-472-472-c.jpg"
+}
+
+###
+PATCH http://localhost:3000/api/categories/5ec0022e40be6e1b0a75ff13
+Content-Type: application/json
+
+{
+    "name": "Пирожки"
+}
+###
+DELETE  http://localhost:3000/api/dishes/5ec004a601f01b1c9a19b4b2
+
+###
+
+DELETE  http://localhost:8000/api/categories/5ec0022e40be6e1b0a75ff13
+
+###
+
+DELETE  http://localhost:8000/api/orders/5ef403bac369752c5a96562e
+
+###
+POST http://localhost:8000/user/signin
+Content-Type: application/json
+
+{
+    "phone": "+380501002030", 
+    "password": "1"
+}
+
+###
+POST http://localhost:8000/user/signup
+Content-Type: application/json
+
+{
+    "name": "Админа кусок",
+    "phone": "+380501000000",
+    "password": "1"
+}
