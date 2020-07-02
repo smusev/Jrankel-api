@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const port = process.env.PORT || 3000;
 
 mongoose.connect(process.env.DATABASE_URL, {useCreateIndex:true, useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
@@ -21,4 +22,4 @@ app.use('/api', apiRouter)
 app.use('/user', userRouter)
 
 
-app.listen(8000, () => console.log('Server started'))
+app.listen(port, () => console.log('Server started'))
